@@ -59,23 +59,35 @@ h5,
     font-size: 15px;
   }
 }
-.image,
+.image-now,
+.image-forecast,
 .text {
   display: inline-block;
 }
-.image {
+.image-now {
   font-size: 100px;
+}
+.image-forecast {
+  font-size: 50px;
 }
 #degrees-now {
   font-size: 50px;
 }
+#degrees-forecast {
+  font-size: 15px;
+}
+
 a#temp-nowC,
 a#temp-nowF {
   text-decoration: none;
   color: white;
 }
+.high {
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
+}
 div.scrolling-wrapper {
-  height: 150px;
+  height: 200px;
   display: block;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -83,7 +95,5 @@ div.scrolling-wrapper {
 }
 div.card {
   display: inline-block;
-}
-div.card {
   background-color: rgb(238, 238, 238, 0.3);
 }
