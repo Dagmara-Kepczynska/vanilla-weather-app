@@ -1,0 +1,60 @@
+body {
+  background-image: url("pastel.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#search-bar {
+  padding: 15px 20px 15px 45px;
+  max-width: 500px;
+  border-radius: 80px;
+  margin: 0 auto;
+}
+
+.row-one {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.column-one {
+  padding: 7px;
+}
+.column-two {
+  background-color: rgb(238, 238, 238, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+}
+.subrow-one {
+  margin-bottom: 20px;
+}
+h1,
+h2,
+h3,
+.image,
+.text,
+.row-one {
+  color: white;
+}
+.column-two p {
+  margin: 0;
+}
+.parameters {
+  font-weight: 600;
+  font-size: 20px;
+}
+.image,
+.text {
+  display: inline-block;
+}
+.image {
+  font-size: 100px;
+}
+#degrees-now {
+  font-size: 50px;
+}
+a#temp-nowC,
+a#temp-nowF {
+  text-decoration: none;
+  color: white;
+}
