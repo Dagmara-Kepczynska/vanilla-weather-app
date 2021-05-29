@@ -19,6 +19,7 @@ input.form-control {
 button {
   border: none;
   padding: inherit;
+  background-color: #e9ecef;
 }
 .row-one {
   text-align: center;
