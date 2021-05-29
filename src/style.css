@@ -11,7 +11,15 @@ body {
   border-radius: 80px;
   margin: 0 auto;
 }
-
+div.input-group-text,
+input.form-control {
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+}
+button {
+  border: none;
+  padding: inherit;
+}
 .row-one {
   text-align: center;
   display: flex;
@@ -28,6 +36,7 @@ body {
 .subrow-one {
   margin-bottom: 20px;
 }
+
 h1,
 h2,
 h3,
@@ -63,4 +72,14 @@ a#temp-nowC,
 a#temp-nowF {
   text-decoration: none;
   color: white;
+}
+div.scrolling-wrapper {
+  height: 150px;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+div.card {
+  display: inline-block;
 }
