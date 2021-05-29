@@ -84,3 +84,6 @@ div.scrolling-wrapper {
 div.card {
   display: inline-block;
 }
+div.card {
+  background-color: rgb(238, 238, 238, 0.3);
+}
