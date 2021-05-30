@@ -11,46 +11,51 @@
     <script src="https://kit.fontawesome.com/9d62a35b64.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container body">
-        
-        <form class="input-group" id="search-bar">
-            <div class="input-group-text"><button><i class="fas fa-map-marked-alt"></i></button></div>
-            <div class="input-group-text"><i class="fas fa-search"></i></div>
-            <input type="text" class="form-control" placeholder="Enter your city">
-        </form>
-        
-        <h1>Sowerby Bridge, GB</h1>
-        <h2 class="date">Saturday, 29 May 2021</h2>
-        <h3>Last updated: <span class="time">11:41</span></h3>
-        <div class="row row-cols-lg-2 row-cols-1  row-one">
-            <div class="col column-one">
-    
-                <div class="image-now">
-                    <i class="fas fa-cloud" id="icon-now"></i>
+        <div class="container body">
+            <div class="search-panel">
+                
+                <div class="search-form">
+                    <form class="input-group" id="search-bar">
+                        <div class="input-group-text"><i class="fas fa-search"></i></div>
+                        <input type="text" class="form-control city-input" placeholder="Enter your city">
+                        
+                    </form>
+                   
                 </div>
-                <div class="text">
-                    <p class="temp-now">
-                        <span id="degrees-now">15</span><span id="unit-now"><a href="#" id="temp-nowC">°C</a> | <a href="#"
-                                id="temp-nowF">°F</a></span>
-                        <br />
-                        <span class="description-now"><strong>Few Clouds</strong></span>
-    
-                    </p>
-                </div>
-    
+                <button class="input-group-btn search-button" id="current-location"><i class="fas fa-map-marked-alt"></i></button>
+            </div>
+            <h1><span id="city"></span> <span id="country"></span></h1>
+            <h2 class="date"></h2>
+            <h3>Last Updated: <span class="time"></span></h3>
+            <div class="row row-cols-lg-2 row-cols-1  row-one">
+                <div class="col column-one">
+        
+                    <div class="image-now">
+                        <i class="fas fa-cloud" id="icon-now"></i>
+                    </div>
+                    <div class="text">
+                        <p class="temp-now">
+                            <span id="degrees-now"></span><span id="unit-now"><a href="#" id="temp-nowC">°C</a> | <a href="#"
+                                    id="temp-nowF">°F</a></span>
+                            <br />
+                            <span id="description-now"><strong></strong></span>
+        
+                        </p>
+                    </div>
+        
             </div>
             <div class="col column-two">
     
                 <div class="row subrow-one">
-                    <div class="col"><p class="feels-like parameters"> 12°C | 48°F </p><p>Feels Like</p></div>
-                    <div class="col"><p class="wind parameters">11 km/h NW</p><p>Wind</p></div>
-                    <div class="col"><p class="sunrise parameters">05:30</p><p>Sunrise</p></div>
+                    <div class="col"><p class="parameters"><span id="feels-likeC"> -</span>°C | <span id="feels-likeF">-</span>°F </p><p>Feels Like</p></div>
+                    <div class="col"><p class="parameters"><span id="wind-speed">-</span> km/h <span id="wind-direction"></span></p><p>Wind</p></div>
+                    <div class="col"><p class="parameters"><span id="sunrise">-</span></p><p>Sunrise</p></div>
     
                 </div>
                 <div class="row subrow-two">
-                    <div class="col"><p class="pressure parameters">1004 hPa</p><p>Pressure</p></div>
-                    <div class="col"><p class="rain parameters">12%</p><p>Rain</p></div>
-                    <div class="col"><p class="sunset parameters">21:30</p><p>Sunset</p></div>
+                    <div class="col"><p class="parameters"><span id="pressure">-</span> hPa</p><p>Pressure</p></div>
+                    <div class="col"><p class="parameters"><span id="rain">-</span>%</p><p>Humidity</p></div>
+                    <div class="col"><p class="parameters"><span id="sunset">-</span></p><p>Sunset</p></div>
     
                 </div>
     
@@ -359,5 +364,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
