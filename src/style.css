@@ -11,9 +11,11 @@ body {
   border-radius: 80px;
 }
 div.search-panel {
+  padding: 20px 0px;
   display: block;
   margin: 0 auto;
   text-align: center;
+  max-width: 80%;
 }
 
 .search-button,
@@ -21,8 +23,8 @@ div.search-panel {
   display: inline-block;
 }
 form#search-bar.input-group {
-  padding-right: 0;
-  margin-right: 0;
+  padding: 0;
+  margin: 0;
   border-right: none;
 }
 button#current-location {
