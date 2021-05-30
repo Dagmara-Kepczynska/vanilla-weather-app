@@ -13,11 +13,9 @@ body {
 div.search-panel {
   display: block;
   margin: 0 auto;
-  width: 600px;
+  width: 50%;
 }
-.search-form {
-  margin: 0 auto;
-}
+
 .search-button,
 .search-form {
   display: inline-block;
