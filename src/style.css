@@ -6,9 +6,11 @@ body {
   background-size: cover;
 }
 
-#search-bar {
-  padding: 15px 50px 15px 50px;
+form#search-bar {
   border-radius: 80px;
+}
+input.form-control.city-input {
+  width: 400px;
 }
 div.search-panel {
   padding: 20px 0px;
@@ -79,6 +81,9 @@ h5,
   .parameters {
     font-weight: 600;
     font-size: 15px;
+  }
+  input.form-control.city-input {
+    width: 100px;
   }
 }
 .image-now,
