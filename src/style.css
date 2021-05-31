@@ -101,6 +101,9 @@ h5,
 #icon-now {
   height: 120px;
 }
+#icon-forecast {
+  font-size: 40px;
+}
 .image-forecast {
   font-size: 50px;
 }
@@ -124,7 +127,7 @@ a#temp-nowF {
   text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
 }
 div.scrolling-wrapper {
-  height: 200px;
+  height: 210px;
   display: block;
   overflow-x: scroll;
   overflow-y: hidden;
