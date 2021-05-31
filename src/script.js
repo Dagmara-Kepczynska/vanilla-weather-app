@@ -45,6 +45,9 @@ function showWeather(response){
  city.innerHTML = response.data.name;
  let country = document.querySelector("#country");
  country.innerHTML = response.data.sys.country;
+ let apiIcon = response.data.weather[0].icon;
+ let icon = document.querySelector("#icon-now");
+ icon.setAttribute("src", `http://openweathermap.org/img/wn/${apiIcon}@2x.png`);
  let temperature = document.querySelector("#degrees-now");
  temperature.innerHTML = Math.round(response.data.main.temp);
  let description = document.querySelector("#description-now");

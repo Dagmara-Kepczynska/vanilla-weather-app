@@ -30,17 +30,19 @@ form#search-bar.input-group {
   border-right: none;
 }
 button#current-location {
-  border-radius: 0px 25px 25px 0px;
+  border-radius: 25px;
   border-left: none;
   margin-left: 0;
   padding-left: 0;
   border: 1px solid rgb(201, 199, 199);
   padding: 6px 15px;
   background-color: #e9ecef;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
 }
 div.input-group-text,
 input.form-control {
-  border-radius: 25px 0px 0px 25px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
 }
 
 .row-one {
@@ -92,8 +94,12 @@ h5,
 .input-group-text {
   display: inline-block;
 }
-.image-now {
-  font-size: 100px;
+.image-now,
+.text {
+  vertical-align: middle;
+}
+#icon-now {
+  height: 120px;
 }
 .image-forecast {
   font-size: 50px;
