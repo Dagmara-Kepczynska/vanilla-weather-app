@@ -101,11 +101,11 @@ h5,
 #icon-now {
   height: 120px;
 }
-#icon-forecast {
+.icon-hourly {
   font-size: 40px;
 }
 .image-forecast {
-  font-size: 50px;
+  font-size: 40px;
 }
 #degrees-now {
   font-size: 50px;
@@ -113,7 +113,8 @@ h5,
 #degrees-forecast {
   font-size: 15px;
 }
-#description-now {
+#description-now,
+.description-hourly {
   text-transform: capitalize;
   font-weight: 500;
 }
@@ -127,7 +128,7 @@ a#temp-nowF {
   text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.3);
 }
 div.scrolling-wrapper {
-  height: 210px;
+  height: 230px;
   display: block;
   overflow-x: scroll;
   overflow-y: hidden;

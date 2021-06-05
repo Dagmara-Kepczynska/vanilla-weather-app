@@ -16,6 +16,32 @@ if (minute.toString().length < 2) {
 }
  }
 
+ function changeUnitC(event) {
+  let temperature = document.querySelector("#degrees-now");
+  let unitC = document.querySelector("#temp-nowC")
+  let unitF = document.querySelector("#temp-nowF")
+   
+    temperature.innerHTML = 15;
+    unitC.setAttribute("style", "font-size: 30px;");
+    unitF.setAttribute("style", "font-size: 20px;");
+}
+    
+function changeUnitF(event) {
+  let temperature = document.querySelector("#degrees-now");
+  let unitC = document.querySelector("#temp-nowC")
+  let unitF = document.querySelector("#temp-nowF")
+  
+    temperature.innerHTML = (temperature *9/5) +32;
+    unitF.setAttribute("style", "font-size: 30px;");
+    unitC.setAttribute("style", "font-size: 20px;");
+}
+
+let currentTempC = document.querySelector("#temp-nowC");
+currentTempC.addEventListener("click", changeUnitC);
+
+let currentTempF = document.querySelector("#temp-nowF");
+currentTempF.addEventListener("click", changeUnitF);
+
 let minutes = transformMinute(minute);
 let liveDate = document.querySelector("h2.date");
 liveDate.innerHTML = `${day}, ${date} ${month} ${year}`;
@@ -78,6 +104,29 @@ function showWeather(response){
  console.log(response);
 }
 
+function showForecast(response){
+  console.log(response);
+
+  let forecastHour = document.querySelectorAll(".forecast-hour");
+  let forecastHourArray = Array.prototype.slice.call(forecastHour);
+  for (i = 0; i<=7; i++){
+  forecastHourArray[i].innerHTML = getTime(response.data.hourly[i + 1].dt * 1000);
+  }
+
+  let descriptionHourly = document.querySelectorAll(".description-hourly");
+  let descriptionHourlyArray = Array.prototype.slice.call(descriptionHourly);
+  for (i = 0; i<=7; i++){
+  descriptionHourlyArray[i].innerHTML = response.data.hourly[i + 1].weather[0].description;
+  }
+
+  let iconHourly = document.querySelectorAll(".icon-hourly");
+  let iconHourlyArray = Array.prototype.slice.call(iconHourly);
+  for (i = 0; i<=7; i++){
+  iconHourlyArray[i].setAttribute("src", `http://openweathermap.org/img/wn/${response.data.hourly[i + 1].weather[0].icon}@2x.png`);
+  }
+
+}
+
 function getCityWeather(event) {
   event.preventDefault();
   let searchedCity = document.querySelector(".city-input");
@@ -94,8 +143,10 @@ function getLocalWeather(event){
       let latitude = coords[0];
       let longitude = coords[1];
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric`;
+      let forecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&exclude={current}`;
       let apiKey = `c74772c1a52f7f9f082fe3de119d5275`;
       axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);
+      axios.get(`${forecastUrl}&appid=${apiKey}`).then(showForecast);
     }
 
     function getLocation(position) {
