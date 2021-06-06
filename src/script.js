@@ -96,10 +96,15 @@ function showWeather(response){
  let apiKey = `c74772c1a52f7f9f082fe3de119d5275`;
  axios.get(`${forecastUrl}&appid=${apiKey}`).then(showForecast);
 
+ let unitC = document.querySelector("#temp-nowC")
+ let unitF = document.querySelector("#temp-nowF")
+ 
+
+ unitC.setAttribute("style", "font-size: 30px;");
+ unitF.setAttribute("style", "font-size: 20px;");
+
  function changeUnitC(event) {
-  let temperature = document.querySelector("#degrees-now");
-  let unitC = document.querySelector("#temp-nowC")
-  let unitF = document.querySelector("#temp-nowF")
+  
    
     temperature.innerHTML = temperatureNow;
     unitC.setAttribute("style", "font-size: 30px;");
@@ -107,9 +112,7 @@ function showWeather(response){
 }
     
 function changeUnitF(event) {
-  let temperature = document.querySelector("#degrees-now");
-  let unitC = document.querySelector("#temp-nowC")
-  let unitF = document.querySelector("#temp-nowF")
+  
   
     temperature.innerHTML = Math.round((temperatureNow *9/5) +32);
     unitF.setAttribute("style", "font-size: 30px;");
