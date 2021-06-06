@@ -101,7 +101,8 @@ h5,
 #icon-now {
   height: 120px;
 }
-.icon-hourly {
+.icon-hourly,
+.icon-daily {
   font-size: 40px;
 }
 .image-forecast {
@@ -110,11 +111,18 @@ h5,
 #degrees-now {
   font-size: 50px;
 }
+#temp-nowC {
+  font-size: 30px;
+}
+#temp-nowF {
+  font-size: 20px;
+}
 #degrees-forecast {
   font-size: 15px;
 }
 #description-now,
-.description-hourly {
+.description-hourly,
+.description-daily {
   text-transform: capitalize;
   font-weight: 500;
 }
