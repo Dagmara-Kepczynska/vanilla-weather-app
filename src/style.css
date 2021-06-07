@@ -98,6 +98,9 @@ h5,
   input.form-control.city-input {
     width: 150px;
   }
+  .footer {
+    font-size: 12px;
+  }
 }
 .image-now,
 .image-forecast,
