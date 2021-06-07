@@ -133,38 +133,32 @@ function showForecast(response){
 
   let forecastHour = document.querySelectorAll(".forecast-hour");
   let forecastHourArray = Array.prototype.slice.call(forecastHour);
-  for (i = 0; i<=7; i++){
+  for (i = 0; i<=11; i++){
   forecastHourArray[i].innerHTML = getTime(response.data.hourly[i + 1].dt * 1000);
   }
 
   let descriptionHourly = document.querySelectorAll(".description-hourly");
   let descriptionHourlyArray = Array.prototype.slice.call(descriptionHourly);
-  for (i = 0; i<=7; i++){
+  for (i = 0; i<=11; i++){
   descriptionHourlyArray[i].innerHTML = response.data.hourly[i + 1].weather[0].description;
   }
 
   let iconHourly = document.querySelectorAll(".icon-hourly");
   let iconHourlyArray = Array.prototype.slice.call(iconHourly);
-  for (i = 0; i<=7; i++){
+  for (i = 0; i<=11; i++){
   iconHourlyArray[i].setAttribute("src", `http://openweathermap.org/img/wn/${response.data.hourly[i + 1].weather[0].icon}@2x.png`);
   }
 
   let degreesHourlyC = document.querySelectorAll(".degrees-hourlyC");
   let degreesHourlyCArray = Array.prototype.slice.call(degreesHourlyC);
-  for (i = 0; i<=7; i++){
+  for (i = 0; i<=11; i++){
   degreesHourlyCArray[i].innerHTML = Math.round(response.data.hourly[i + 1].temp);
   }
 
   let degreesHourlyF = document.querySelectorAll(".degrees-hourlyF");
   let degreesHourlyFArray = Array.prototype.slice.call(degreesHourlyF);
-  for (i = 0; i<=7; i++){
+  for (i = 0; i<=11; i++){
   degreesHourlyFArray[i].innerHTML = Math.round((response.data.hourly[i + 1].temp) * 9/5 + 32);
-  }
-
-  let humidity = document.querySelectorAll(".humidity");
-  let humidityArray = Array.prototype.slice.call(humidity);
-  for (i = 0; i<=7; i++){
-  humidityArray[i].innerHTML = response.data.hourly[i + 1].humidity;
   }
 
   let date = document.querySelectorAll(".forecast-day");
@@ -207,6 +201,18 @@ function showForecast(response){
   let degreesLowFArray = Array.prototype.slice.call(degreesLowF);
   for (i = 0; i<=7; i++){
   degreesLowFArray[i].innerHTML = Math.round((response.data.daily[i].temp.min) * 9/5 + 32);
+  }
+
+  let precipitationHourly = document.querySelectorAll(".precipitation-hourly");
+  let precipitationHourlyArray = Array.prototype.slice.call(precipitationHourly);
+  for (i = 0; i<=7; i++){
+  precipitationHourlyArray[i].innerHTML = Math.round(response.data.hourly[i + 1].pop * 100);
+  }
+
+  let precipitationDaily = document.querySelectorAll(".precipitation-daily");
+  let precipitationDailyArray = Array.prototype.slice.call(precipitationDaily);
+  for (i = 0; i<=7; i++){
+  precipitationDailyArray[i].innerHTML = Math.round(response.data.daily[i].pop * 100);
   }
 }
 
