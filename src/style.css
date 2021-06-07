@@ -6,6 +6,10 @@ body {
   background-size: cover;
 }
 
+.body {
+  font-family: "Inter", sans-serif;
+}
+
 form#search-bar {
   border-radius: 80px;
 }
@@ -157,8 +161,8 @@ div.card {
   color: white;
 }
 .href {
-  color: rgb(148, 146, 146);
+  color: #ec6e4c;
 }
 .href:hover {
-  color: rgb(87, 86, 86);
+  color: #48484a;
 }
