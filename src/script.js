@@ -55,6 +55,7 @@ function getDate(unixTimeStamp) {
 
 
 function showWeather(response){
+  console.log(response);
  let city = document.querySelector("#city"); 
  city.innerHTML = response.data.name;
  let country = document.querySelector("#country");
