@@ -39,6 +39,13 @@ button#current-location {
   background-color: #e9ecef;
   box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
 }
+button#current-location:hover {
+  background-color: rgb(204, 202, 202);
+}
+button#current-location:active {
+  background-color: #e9ecef;
+}
+
 div.input-group-text,
 input.form-control {
   border-radius: 25px;
