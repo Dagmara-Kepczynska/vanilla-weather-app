@@ -62,7 +62,7 @@ function showWeather(response){
  country.innerHTML = response.data.sys.country;
  let apiIcon = response.data.weather[0].icon;
  let icon = document.querySelector("#icon-now");
- icon.setAttribute("src", `http://openweathermap.org/img/wn/${apiIcon}@2x.png`);
+ icon.setAttribute("src", `https://openweathermap.org/img/wn/${apiIcon}@2x.png`);
  let temperature = document.querySelector("#degrees-now");
  let temperatureNow = Math.round(response.data.main.temp);
  temperature.innerHTML = temperatureNow;
@@ -147,7 +147,7 @@ function showForecast(response){
   let iconHourly = document.querySelectorAll(".icon-hourly");
   let iconHourlyArray = Array.prototype.slice.call(iconHourly);
   for (i = 0; i<=11; i++){
-  iconHourlyArray[i].setAttribute("src", `http://openweathermap.org/img/wn/${response.data.hourly[i + 1].weather[0].icon}@2x.png`);
+  iconHourlyArray[i].setAttribute("src", `https://openweathermap.org/img/wn/${response.data.hourly[i + 1].weather[0].icon}@2x.png`);
   }
 
   let degreesHourlyC = document.querySelectorAll(".degrees-hourlyC");
@@ -177,7 +177,7 @@ function showForecast(response){
   let iconDaily = document.querySelectorAll(".icon-daily");
   let iconDailyArray = Array.prototype.slice.call(iconDaily);
   for (i = 0; i<=7; i++){
-  iconDailyArray[i].setAttribute("src", `http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png`);
+  iconDailyArray[i].setAttribute("src", `https://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png`);
   }
 
   let degreesHighC = document.querySelectorAll(".degrees-high-dailyC");
